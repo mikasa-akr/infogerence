@@ -1,0 +1,20 @@
+# Infogérance
+
+> Infogérance (managed IT services) company based in Tunis, Tunisia. Specialised in infogérance informatique, systèmes & réseaux and cybersécurité for SMEs and large organisations: proactive monitoring, 24/7 support and security, cloud, outsourcing and IT audits. Projects delivered in Tunisia, France and Africa. Site available in French (default) and English (?lang=en).
+
+## Key facts
+- Location: 02 Rue Mahmoud Ghaznaoui, Tunis 1082, Tunisia
+- Phone: +216 98 686 940 · Email: contact@next.tn
+- Office hours: Monday–Friday 8:30–17:30; monitoring and support 24/7 for clients
+- Managed-services centre: "Proximity" (Support, Analyzer, SOC, Backup, Network Protect, Office 365, Hosting, Disaster Recovery)
+- Tools: Zabbix, Wazuh, Prometheus, Grafana (monitoring/security); MeshCentral, Ansible, TeamViewer, AnyDesk (remote admin); Nextcloud, OwnCloud, Office 365 (collaboration)
+
+## Pages
+- [Home](https://infogerance.tn/): who we are, mission, approach, FAQ
+- [Services](https://infogerance.tn/services.html): overview of the 5 services
+- [Intégration](https://infogerance.tn/service-integration.html): turnkey IT projects, migrations, hybrid architectures, ROI follow-up
+- [Services managés](https://infogerance.tn/service-services-manages.html): Proximity managed services, single contract, measured SLAs
+- [Services Cloud](https://infogerance.tn/service-services-cloud.html): Office 365, hosting, disaster recovery
+- [Outsourcing](https://infogerance.tn/service-outsourcing.html): outsource IT operations with contractual SLAs, 24/7 monitoring
+- [Audit des infrastructures IT](https://infogerance.tn/service-audit-infrastructures.html): security, compliance and performance audit
+- [Contact](https://infogerance.tn/contact.html): quote request form and coordinates

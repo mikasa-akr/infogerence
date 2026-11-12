@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos Services | NEXT CONSULT</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{background:#f5f7fb;color:#222;}
+header{background:rgba(255,255,255,0.95);padding:20px 80px;display:flex;justify-content:space-between;align-items:center;position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 5px 20px rgba(0,0,0,.05);}
+.logo{font-size:22px;font-weight:700;color:#0b3c5d;}
+nav a{margin-left:25px;text-decoration:none;color:#333;font-weight:500;}
+nav a:hover{color:#328cc1;}
+section{padding:35px 80px;}
+section:first-of-type{padding-top:110px;}
+.section-title{text-align:center;font-size:36px;margin-bottom:16px;color:#0b3c5d;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;}
+.card{background:#fff;padding:30px;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.07);}
+.card h3{margin-bottom:15px;color:#1d3557;}
+.card ul{list-style-type:disc;padding-left:20px;opacity:.9;margin-bottom:15px;}
+.card p.benefit{font-weight:500;color:#328cc1;margin-bottom:15px;}
+.card a{display:inline-block;text-decoration:none;color:#fff;background:#ffb703;padding:10px 20px;border-radius:25px;font-weight:500;transition:.3s;}
+.card a:hover{background:#0b3c5d;}
+.case-study{background:#fff;padding:30px;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.07);margin-bottom:20px;}
+.case-study h4{color:#1d3557;margin-bottom:10px;}
+.case-study p{opacity:.9;margin-bottom:10px;}
+footer{background:#0b3c5d;color:#fff;text-align:center;padding:24px;}
+@media(max-width:768px){
+header{padding:16px 20px;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between;}
+nav{width:100%;display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end;}
+nav a{margin-left:0;white-space:nowrap;}
+section{padding:28px 16px;}
+section:first-of-type{padding-top:90px;}
+}
+</style>
+</head>
+
+<body>
+<header>
+<a href="index.html" style="text-decoration:none;"><div class="logo">Infogérance</div></a>
+<nav>
+<a href="index.html">Accueil</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section>
+<h2 class="section-title">Nos Services Détaillés</h2>
+<div class="cards">
+
+<!-- Infogérance IT -->
+<div class="card">
+<h3>🖥️ Infogérance IT</h3>
+<p class="benefit">Bénéfice : Concentrez-vous sur votre activité, nous gérons votre IT.</p>
+<ul>
+<li>Supervision 24/7 des serveurs et équipements</li>
+<li>Maintenance préventive et corrective</li>
+<li>Support utilisateurs et helpdesk</li>
+<li>Gestion des sauvegardes et sécurité</li>
+</ul>
+<a href="contact.html">Demander un audit gratuit</a>
+</div>
+
+<!-- Systèmes & Réseaux -->
+<div class="card">
+<h3>🌐 Systèmes & Réseaux</h3>
+<p class="benefit">Bénéfice : Infrastructure stable et sécurisée pour vos utilisateurs.</p>
+<ul>
+<li>Installation et configuration serveurs Windows/Linux</li>
+<li>Virtualisation VMware, Proxmox, Hyper-V</li>
+<li>VPN, firewall, VLAN et sécurisation réseau</li>
+<li>Gestion Active Directory & GPO</li>
+</ul>
+<a href="contact.html">Planifier une consultation</a>
+</div>
+
+<!-- Cybersécurité -->
+<div class="card">
+<h3>🔐 Cybersécurité</h3>
+<p class="benefit">Bénéfice : Protégez votre entreprise contre les cyberattaques.</p>
+<ul>
+<li>Audit de sécurité et tests d’intrusion</li>
+<li>Protection antivirus, IDS/IPS</li>
+<li>PRA / PCA et sauvegarde sécurisée</li>
+<li>Sensibilisation sécurité utilisateurs</li>
+</ul>
+<a href="contact.html">Demander un audit sécurité</a>
+</div>
+
+<!-- Cloud & Collaboration -->
+<div class="card">
+<h3>☁️ Cloud & Collaboration</h3>
+<p class="benefit">Bénéfice : Travail collaboratif sécurisé et accessible partout.</p>
+<ul>
+<li>Nextcloud entreprise et messagerie sécurisée</li>
+<li>Migration vers le cloud et sauvegarde hybride</li>
+<li>Solutions collaboratives et partage sécurisé</li>
+</ul>
+<a href="contact.html">Découvrir nos solutions cloud</a>
+</div>
+
+<!-- Support Technique -->
+<div class="card">
+<h3>🛠️ Support Technique</h3>
+<p class="benefit">Bénéfice : Intervention rapide et assistance continue pour vos utilisateurs.</p>
+<ul>
+<li>Assistance à distance et sur site</li>
+<li>Gestion des incidents et tickets</li>
+<li>Intervention rapide et suivi des solutions</li>
+</ul>
+<a href="contact.html">Contacter notre support</a>
+</div>
+
+</div>
+</section>
+
+<!-- Études de cas / résultats concrets -->
+<section>
+<h2 class="section-title">Nos Études de Cas</h2>
+
+<div class="case-study">
+<h4>Réduction du downtime pour PME X</h4>
+<p>Avant : plusieurs pannes serveur par mois affectant la production.</p>
+<p>Après : supervision proactive et maintenance → 90% moins de downtime.</p>
+</div>
+
+<div class="case-study">
+<h4>Mise en place sécurité réseau pour entreprise Y</h4>
+<p>Avant : risque de fuite de données et accès non sécurisé.</p>
+<p>Après : firewall, VPN et PRA → infrastructure totalement sécurisée.</p>
+</div>
+
+<div class="case-study">
+<h4>Migration cloud hybride pour société Z</h4>
+<p>Avant : données dispersées et peu accessibles à distance.</p>
+<p>Après : Nextcloud et sauvegarde hybride → accès sécurisé et collaboratif.</p>
+</div>
+
+</section>
+
+<!-- Avant / Après -->
+<section>
+<h2 class="section-title">Avant vs Après NEXT CONSULT</h2>
+<div class="cards">
+<div class="card">
+<h3>Avant</h3>
+<ul>
+<li>Serveurs non surveillés</li>
+<li>Risque de perte de données</li>
+<li>Support lent et réactif</li>
+<li>Sécurité réseau insuffisante</li>
+</ul>
+</div>
+<div class="card">
+<h3>Après</h3>
+<ul>
+<li>Supervision 24/7 et maintenance proactive</li>
+<li>Sauvegarde sécurisée et PRA</li>
+<li>Support rapide et helpdesk dédié</li>
+<li>Sécurité réseau complète et contrôlée</li>
+</ul>
+</div>
+</div>
+</section>
+
+<footer>
+© 2026 NEXT CONSULT – Tous droits réservés
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | NEXT CONSULT</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{background:#f5f7fb;color:#222;}
+header{background:rgba(255,255,255,0.95);padding:20px 80px;display:flex;justify-content:space-between;align-items:center;position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 5px 20px rgba(0,0,0,.05);}
+.logo{font-size:22px;font-weight:700;color:#0b3c5d;}
+nav a{margin-left:25px;text-decoration:none;color:#333;font-weight:500;}
+nav a:hover{color:#328cc1;}
+section{padding:45px 80px;}
+section:first-of-type{padding-top:120px;}
+.section-title{text-align:center;font-size:36px;margin-bottom:20px;color:#0b3c5d;}
+.alert{max-width:1200px;margin:0 auto 25px auto;padding:14px 18px;border-radius:12px;display:none;box-shadow:0 10px 25px rgba(0,0,0,.07);}
+.alert.success{background:#e9f7ef;color:#1e6b3a;border:1px solid #bfe8cf;}
+.alert.error{background:#fdecec;color:#8a1f1f;border:1px solid #f5bcbc;}
+.contact-container{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1200px;margin:0 auto;}
+.contact-form{background:#fff;padding:40px;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.07);}
+.form-group{margin-bottom:20px;}
+.form-group label{display:block;margin-bottom:8px;font-weight:500;color:#1d3557;}
+.form-group input,.form-group textarea{width:100%;padding:12px 15px;border:1px solid #ddd;border-radius:8px;font-size:14px;}
+.form-group input:focus,.form-group textarea:focus{outline:none;border-color:#328cc1;}
+.form-group textarea{resize:vertical;min-height:120px;}
+.btn-submit{background:#ffb703;color:#fff;border:none;padding:15px 30px;border-radius:25px;font-size:16px;font-weight:500;cursor:pointer;transition:.3s;}
+.btn-submit:hover{background:#0b3c5d;}
+.contact-info{background:#fff;padding:40px;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.07);}
+.contact-info h3{color:#1d3557;margin-bottom:25px;font-size:22px;}
+.info-item{display:flex;align-items:flex-start;margin-bottom:25px;}
+.info-item .icon{font-size:24px;margin-right:15px;color:#328cc1;}
+.info-item h4{color:#0b3c5d;margin-bottom:5px;}
+.info-item p{opacity:.9;}
+.map-container{margin-top:30px;border-radius:12px;overflow:hidden;height:200px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;color:#666;}
+footer{background:#0b3c5d;color:#fff;text-align:center;padding:30px;}
+@media(max-width:768px){
+header{padding:16px 20px;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between;}
+nav{width:100%;display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end;}
+nav a{margin-left:0;white-space:nowrap;}
+section{padding:35px 20px;}
+section:first-of-type{padding-top:100px;}
+.contact-container{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<header>
+<a href="index.html" style="text-decoration:none;"><div class="logo">Infogérance</div></a>
+<nav>
+<a href="index.html">Accueil</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section>
+<h2 class="section-title">Contactez-nous</h2>
+
+<div id="form-alert-success" class="alert success">Merci ! Votre message a bien été envoyé.</div>
+<div id="form-alert-error" class="alert error">Erreur : impossible d’envoyer le message. Vérifiez vos informations et réessayez.</div>
+
+<div class="contact-container">
+
+<div class="contact-form">
+<h3>Envoyez-nous un message</h3>
+<form action="contact.php" method="POST">
+<div class="form-group">
+<label for="name">Nom complet</label>
+<input type="text" id="name" name="name" required>
+</div>
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" id="email" name="email" required>
+</div>
+<div class="form-group">
+<label for="phone">Téléphone</label>
+<input type="tel" id="phone" name="phone" required inputmode="numeric" pattern="[0-9]+">
+</div>
+<div class="form-group">
+<label for="subject">Sujet</label>
+<input type="text" id="subject" name="subject" required>
+</div>
+<div class="form-group">
+<label for="message">Message</label>
+<textarea id="message" name="message" required></textarea>
+</div>
+<input type="text" name="website" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;" aria-hidden="true">
+<button type="submit" class="btn-submit">Envoyer le message</button>
+</form>
+</div>
+
+<div class="contact-info">
+<h3>Nos coordonnées</h3>
+
+<div class="info-item">
+<div class="icon">📍</div>
+<div>
+<h4>Adresse</h4>
+<p>02 Rue Mahmoud Ghaznaoui, Tunis 1082</p>
+</div>
+</div>
+
+<div class="info-item">
+<div class="icon">📞</div>
+<div>
+<h4>Téléphone</h4>
+<p>+216 98 686 940</p>
+</div>
+</div>
+
+<div class="info-item">
+<div class="icon">✉️</div>
+<div>
+<h4>Email</h4>
+<p>contact@next.tn</p>
+</div>
+</div>
+
+<div class="info-item">
+<div class="icon">🕒</div>
+<div>
+<h4>Horaires</h4>
+<p>Lun - Ven : 8h30 - 17h30<br>Support 24/7 pour clients</p>
+</div>
+</div>
+
+<div class="map-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.9296275238776!2d10.181522400000002!3d36.8441614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd35e5d123096d%3A0x333a587f1c5b6fa2!2sNEXT%20CONSULT!5e0!3m2!1sen!2stn!4v1772532785524!5m2!1sen!2stn" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 NEXT CONSULT – Tous droits réservés
+</footer>
+
+<script>
+(() => {
+  const params = new URLSearchParams(window.location.search);
+  const successEl = document.getElementById('form-alert-success');
+  const errorEl = document.getElementById('form-alert-error');
+
+  if (params.get('sent') === '1' && successEl) successEl.style.display = 'block';
+  if (params.get('error') === '1' && errorEl) errorEl.style.display = 'block';
+})();
+</script>
+
+</body>
+</html>
