@@ -248,6 +248,7 @@ function smtpSend(array $cfg, string $to, array $cc, string $subject, string $bo
 function verifyRecaptcha(string $secret, string $response): bool {
     $response = trim($response);
     if ($response === '') {
+        error_log('[recaptcha-debug] empty g-recaptcha-response from browser');
         return false;
     }
 
@@ -258,23 +259,41 @@ function verifyRecaptcha(string $secret, string $response): bool {
         'remoteip' => $_SERVER['REMOTE_ADDR'] ?? '',
     ]);
 
-    $opts = [
-        'http' => [
-            'method' => 'POST',
-            'header' => 'Content-type: application/x-www-form-urlencoded',
-            'content' => $data,
-            'timeout' => 10,
-        ],
-    ];
+    $result = false;
+    if (ini_get('allow_url_fopen')) {
+        $opts = ['http' => ['method' => 'POST', 'header' => 'Content-type: application/x-www-form-urlencoded', 'content' => $data, 'timeout' => 10]];
+        $result = @file_get_contents($verifyUrl, false, stream_context_create($opts));
+        if ($result === false) {
+            $e = error_get_last();
+            error_log('[recaptcha-debug] file_get_contents failed: ' . ($e['message'] ?? 'unknown'));
+        }
+    } else {
+        error_log('[recaptcha-debug] allow_url_fopen is OFF');
+    }
 
-    $context = stream_context_create($opts);
-    $result = @file_get_contents($verifyUrl, false, $context);
+    // Fallback: cURL
+    if ($result === false && function_exists('curl_init')) {
+        $ch = curl_init($verifyUrl);
+        curl_setopt_array($ch, [CURLOPT_POST => true, CURLOPT_POSTFIELDS => $data, CURLOPT_RETURNTRANSFER => true, CURLOPT_TIMEOUT => 10]);
+        $result = curl_exec($ch);
+        if ($result === false) {
+            error_log('[recaptcha-debug] curl failed: ' . curl_error($ch));
+        }
+        curl_close($ch);
+    } elseif ($result === false) {
+        error_log('[recaptcha-debug] curl extension not available');
+    }
+
     if ($result === false) {
         return false;
     }
 
-    $json = json_decode($result, true);
-    return is_array($json) && ($json['success'] ?? false) === true;
+    $json = json_decode((string)$result, true);
+    if (!is_array($json) || ($json['success'] ?? false) !== true) {
+        error_log('[recaptcha-debug] Google said: ' . substr((string)$result, 0, 300));
+        return false;
+    }
+    return true;
 }
 
 loadDotEnv(__DIR__ . DIRECTORY_SEPARATOR . '.env');
@@ -302,6 +321,9 @@ if ($website !== '') {
 
 $recaptchaSecret = env('RECAPTCHA_SECRET_KEY', '');
 $recaptchaResponse = trim((string)($_POST['g-recaptcha-response'] ?? ''));
+if ($recaptchaSecret === '') {
+    error_log('[recaptcha-debug] RECAPTCHA_SECRET_KEY is EMPTY: .env not found/readable at ' . __DIR__ . '/.env (exists=' . (is_file(__DIR__ . '/.env') ? 'yes' : 'NO') . ')');
+}
 
 if ($recaptchaSecret === '' || $recaptchaResponse === '' || !verifyRecaptcha($recaptchaSecret, $recaptchaResponse)) {
     error_log('Contact form blocked by reCAPTCHA');

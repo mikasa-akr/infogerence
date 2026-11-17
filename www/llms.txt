@@ -10,11 +10,11 @@
 - Tools: Zabbix, Wazuh, Prometheus, Grafana (monitoring/security); MeshCentral, Ansible, TeamViewer, AnyDesk (remote admin); Nextcloud, OwnCloud, Office 365 (collaboration)
 
 ## Pages
-- [Home](https://info.4help.tn/): who we are, mission, approach, FAQ
-- [Services](https://info.4help.tn/services.html): overview of the 5 services
-- [Intégration](https://info.4help.tn/service-integration.html): turnkey IT projects, migrations, hybrid architectures, ROI follow-up
-- [Services managés](https://info.4help.tn/service-services-manages.html): Proximity managed services, single contract, measured SLAs
-- [Services Cloud](https://info.4help.tn/service-services-cloud.html): Office 365, hosting, disaster recovery
-- [Outsourcing](https://info.4help.tn/service-outsourcing.html): outsource IT operations with contractual SLAs, 24/7 monitoring
-- [Audit des infrastructures IT](https://info.4help.tn/service-audit-infrastructures.html): security, compliance and performance audit
-- [Contact](https://info.4help.tn/contact.html): quote request form and coordinates
+- [Home](https://infogerance.tn/): who we are, mission, approach, FAQ
+- [Services](https://infogerance.tn/services.html): overview of the 5 services
+- [Intégration](https://infogerance.tn/service-integration.html): turnkey IT projects, migrations, hybrid architectures, ROI follow-up
+- [Services managés](https://infogerance.tn/service-services-manages.html): Proximity managed services, single contract, measured SLAs
+- [Services Cloud](https://infogerance.tn/service-services-cloud.html): Office 365, hosting, disaster recovery
+- [Outsourcing](https://infogerance.tn/service-outsourcing.html): outsource IT operations with contractual SLAs, 24/7 monitoring
+- [Audit des infrastructures IT](https://infogerance.tn/service-audit-infrastructures.html): security, compliance and performance audit
+- [Contact](https://infogerance.tn/contact.html): quote request form and coordinates
